@@ -10,6 +10,7 @@
     "@sailshq/socket.io-redis": "^5.2.0",
     "async": "2.0.1",
     "bcrypt-nodejs": "0.0.3",
+    "express-jwt": "^5.3.1",
     "grunt": "1.0.1",
     "jsonwebtoken": "^8.3.0",
     "mobx-react": "^5.2.3",
@@ -21,7 +22,8 @@
     "sails-hook-grunt": "^3.0.2",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
-    "sails-mongo": "^1.0.1"
+    "sails-mongo": "^1.0.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3",
