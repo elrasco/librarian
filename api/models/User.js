@@ -34,7 +34,7 @@ module.exports = {
     return _.omit(this, ['password']);
   },
   beforeCreate: function(user, cb) {
-    bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.genSalt(8, function(err, salt) {
       bcrypt.hash(user.password, salt, null, function(err, hash) {
         if (err) return cb(err);
         user.password = hash;
