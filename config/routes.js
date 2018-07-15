@@ -49,6 +49,7 @@ module.exports.routes = {
   'PUT /book/book/:bookId/:userId': 'BookController.book',
   'PUT /book/unbook/:bookId/:userId': 'BookController.unbook',
 
+  'GET /user/:userId': 'UserController.findOne',
   'GET /user/can-borrow/:userId': 'UserController.canBorrow',
   'GET /user/can-book/:userId': 'UserController.canBook',
   'PUT /user/enable/:userId': 'UserController.enable',

@@ -19,18 +19,14 @@ module.exports.policies = {
   '*': true,
 
   BookController: {
-    '*': true,
-    find: 'hasToken',
-    info: 'hasToken',
-    borrow: ['hasToken', 'isAdmin'],
-    return: ['hasToken', 'isAdmin'],
+    '*': ['hasToken', 'isAdmin'],
+    find: ['hasToken'],
     book: ['hasToken', 'isAdminOrOwner'],
     unbook: ['hasToken', 'isAdminOrOwner']
   },
   UserController: {
-    disable: ['hasToken', 'isAdmin'],
-    enable: ['hasToken', 'isAdmin'],
-    find: ['hasToken', 'isAdmin'],
+    '*': ['hasToken', 'isAdmin'],
+    findOne: ['hasToken', 'isAdminOrOwner'],
     canBorrow: ['hasToken', 'isAdminOrOwner'],
     canBook: ['hasToken', 'isAdminOrOwner']
   }

@@ -33,5 +33,11 @@ module.exports = {
     User.disable(req.params.userId)
       .then(sendOK(res))
       .catch(sendKO(res));
-  }
+  },
+  findOne: (req, res) => {
+    User.findOne({ id: req.params.userId })
+      .then(sendOK(res))
+      .catch(sendKO(res));
+  },
+  register: () => {}
 };
