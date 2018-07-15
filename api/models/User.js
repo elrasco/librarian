@@ -16,10 +16,10 @@ module.exports = {
     username: { type: 'string', unique: true, required: true },
     password: { type: 'string', required: true },
     email: { type: 'string', required: true },
-    role: { type: 'string' },
-    active: { type: 'boolean', defaultsTo: true },
+    role: { type: 'string', enum: ['admin', 'client'] },
+    status: { type: 'string', enum: ['enabled', 'pending', 'disabled'] },
     history: { type: 'json' },
-    mobile: { type: 'string', required: true },
+    mobile: { type: 'string' },
     address: { type: 'string' }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

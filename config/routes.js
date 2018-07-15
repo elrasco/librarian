@@ -43,8 +43,8 @@ module.exports.routes = {
   'POST /login': 'AuthController.login',
   'GET /logout': 'AuthController.logout',
 
-  'GET /book/info': 'BookController.info'
-
+  'GET /book/info': 'BookController.info',
+  'PUT /book/borrow/:bookId/:userId': 'BookController.borrow'
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝

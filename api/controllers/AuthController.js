@@ -20,7 +20,6 @@ module.exports = {
         });
       }
 
-      console.log(req.user);
       req.login(user, function(err) {
         console.log(req.user);
         if (err) res.send(err);
