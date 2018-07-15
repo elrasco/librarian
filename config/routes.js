@@ -44,7 +44,15 @@ module.exports.routes = {
   'GET /logout': 'AuthController.logout',
 
   'GET /book/info': 'BookController.info',
-  'PUT /book/borrow/:bookId/:userId': 'BookController.borrow'
+  'PUT /book/borrow/:bookId/:userId': 'BookController.borrow',
+  'PUT /book/return/:bookId/:userId': 'BookController.return',
+  'PUT /book/book/:bookId/:userId': 'BookController.book',
+  'PUT /book/unbook/:bookId/:userId': 'BookController.unbook',
+
+  'GET /user/can-borrow/:userId': 'UserController.canBorrow',
+  'GET /user/can-book/:userId': 'UserController.canBook',
+  'PUT /user/enable/:userId': 'UserController.enable',
+  'PUT /user/disable/:userId': 'UserController.disable'
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝

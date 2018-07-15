@@ -19,17 +19,13 @@ passport.use(
       passportField: 'password'
     },
     function(username, password, cb) {
-      User.findOne({ username: username }, function(err, user) {
+      User.findOne({ username: username, status: 'enabled' }, function(err, user) {
         if (err) return cb(err);
         if (!user) return cb(null, false, { message: 'Username not found' });
         bcrypt.compare(password, user.password, function(err, res) {
           if (!res) return cb(null, false, { message: 'Invalid Password' });
 
-          let userDetails = {
-            email: user.email,
-            username: user.username,
-            id: user.id
-          };
+          let userDetails = _.omit(user, ['history', 'created_at', 'updated_at', 'password']);
           return cb(null, userDetails, { message: 'Login Succesful' });
         });
       });
