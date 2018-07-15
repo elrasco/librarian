@@ -19,8 +19,8 @@ module.exports = {
     username: { type: 'string', unique: true, required: true },
     password: { type: 'string', required: true },
     email: { type: 'string', required: true },
-    role: { type: 'string', enum: ['admin', 'client'] },
-    status: { type: 'string', enum: ['enabled', 'pending', 'disabled'] },
+    role: { type: 'string', isIn: ['admin', 'client'], defaultsTo: 'client' },
+    status: { type: 'string', isIn: ['enabled', 'pending', 'disabled'], defaultsTo: 'pending' },
     history: { type: 'json', defaultsTo: [] },
     mobile: { type: 'string' },
     address: { type: 'string' }

@@ -53,7 +53,8 @@ module.exports.routes = {
   'GET /user/can-borrow/:userId': 'UserController.canBorrow',
   'GET /user/can-book/:userId': 'UserController.canBook',
   'PUT /user/enable/:userId': 'UserController.enable',
-  'PUT /user/disable/:userId': 'UserController.disable'
+  'PUT /user/disable/:userId': 'UserController.disable',
+  'POST /user/register': 'UserController.register'
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝

@@ -26,6 +26,7 @@ module.exports.policies = {
   },
   UserController: {
     '*': ['hasToken', 'isAdmin'],
+    register: true,
     findOne: ['hasToken', 'isAdminOrOwner'],
     canBorrow: ['hasToken', 'isAdminOrOwner'],
     canBook: ['hasToken', 'isAdminOrOwner']

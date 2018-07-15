@@ -39,5 +39,10 @@ module.exports = {
       .then(sendOK(res))
       .catch(sendKO(res));
   },
-  register: () => {}
+  register: (req, res) => {
+    User.create({ username: req.body.username, password: req.body.password, email: req.body.username })
+      .fetch()
+      .then(sendOK(res))
+      .catch(sendKO(res));
+  }
 };
